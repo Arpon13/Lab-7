@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_9/utils/constants/colors.dart';
+import 'package:iconsax/iconsax.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -17,6 +18,17 @@ class Home extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        actions: [
+          Container(
+            padding: EdgeInsets.fromLTRB(5, 10, 10, 5),
+            child: Icon(Iconsax.notification_bing),
+            ),
+          Container(
+            padding: EdgeInsets.fromLTRB(5, 10, 10, 5),
+            child: Icon(Iconsax.shopping_cart),
+            ),
+        
+        ],
       ),  
     );
   }
