@@ -6,7 +6,10 @@ import '../../utils/constants/colors.dart';
 class FAppBar extends StatelessWidget implements PreferredSizeWidget {
   const FAppBar({
     super.key,
+    required this.title,
   });
+
+  final String title;
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -14,7 +17,7 @@ class FAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text("Mega Shop",
+      title: Text( title,
       style: TextStyle(
         fontFamily: "DMSans",
         fontWeight: FontWeight.w700,

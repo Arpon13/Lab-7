@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: FAppBar(),  
+      appBar: FAppBar(title: "Mega Shop",),  
     );
   }
 }
