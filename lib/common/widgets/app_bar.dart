@@ -7,9 +7,15 @@ class FAppBar extends StatelessWidget implements PreferredSizeWidget {
   const FAppBar({
     super.key,
     required this.title,
+    this.firstIcon = Iconsax.notification_bing,
+    required this.secondIcon,
+    this.backButton = true,
   });
 
   final String title;
+  final IconData firstIcon;
+  final IconData secondIcon;
+  final bool backButton;
 
   @override
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
@@ -17,7 +23,9 @@ class FAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text( title,
+      leading:backButton ? Icon(Iconsax.arrow_left_1) : null,
+      title: Text( 
+      title,
       style: TextStyle(
         fontFamily: "DMSans",
         fontWeight: FontWeight.w700,
@@ -28,11 +36,11 @@ class FAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         Container(
           padding: EdgeInsets.fromLTRB(5, 10, 10, 5),
-          child: Icon(Iconsax.notification_bing),
+          child: Icon(firstIcon),
                   ),
         Container(
           padding: EdgeInsets.fromLTRB(5, 10, 10, 5),
-          child: Icon(Iconsax.shopping_cart),
+          child: Icon(secondIcon),
           ),
       
       ],
