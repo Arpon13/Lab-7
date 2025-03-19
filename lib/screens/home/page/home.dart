@@ -14,6 +14,27 @@ class Home extends StatelessWidget {
 
       appBar: FAppBar(title: "Mega Shop", 
       secondIcon: Iconsax.logout,),  
+      
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(
+          icon: Icon(Iconsax.home),
+          label: "Home"
+          ),
+
+        BottomNavigationBarItem(
+        icon:
+        Icon(Iconsax.heart),
+        label: "Wishlist"
+        ),
+        BottomNavigationBarItem(icon: 
+        Icon(Icons.shopping_cart_outlined), 
+        label: "Orders"
+        ),
+        BottomNavigationBarItem(icon: 
+        Icon(Icons.person), 
+        label: "User"
+        ),
+      ],),
     );
   }
 }
