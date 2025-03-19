@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_9/screens/home/page/home_screen.dart';
 import 'package:flutter_application_9/screens/home/widget/bottom_navBar.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -17,21 +18,15 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int currentIndex = 0;
-  
+
 void onTabTapped(int index) {
     setState(() {
       currentIndex = index;
     });
   }
   final List<Widget> _screens = [
-    Container(
-      color: Colors.green,
-      height: double.infinity,
-    ),
-    Container(
-      color: Colors.amber,
-      height: double.infinity,
-    ),
+    HomeScreen(),
+    DemoApi(),
     Container(
       color: Colors.blue,
       height: double.infinity,
